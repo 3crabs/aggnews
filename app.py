@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetHistoryRequest
+import requests
 
 app = Flask(__name__)
 
@@ -20,6 +21,7 @@ def hello_world():
 @app.route('/api/v1/forwards', methods=['POST'])
 def forwards():
     print('forwards')
+    print(request.json)
     channel_from_url = request.json['channel_from_url']
     channel_to_url = request.json['channel_to_url']
     words = request.json['words']
@@ -45,13 +47,13 @@ client.start()
 
 def good_message(message, words, sending_ids):
     for word in words:
-        if word in message.message and message.id not in sending_ids:
+        if (word in message.message) and (message.id not in sending_ids):
             print(message.message)
             return True
     return False
 
 
-async def dump_all_messages(channel_from, channel_to, words, sending_ids, total_count_limit):
+async def dump_all_messages(channel_from_url, channel_from, channel_to_url, channel_to, words, sending_ids, total_count_limit):
     offset_msg = 0  # номер записи, с которой начинается считывание
     limit_msg = 100  # максимальное число записей, передаваемых за один раз
     all_messages = []  # список всех сообщений
@@ -74,15 +76,28 @@ async def dump_all_messages(channel_from, channel_to, words, sending_ids, total_
             break
 
     messages = all_messages[:total_count_limit]
+    misha_messages = []
+
     for message in messages:
         if good_message(message, words, sending_ids):
+            misha_messages.append({"channel_from": channel_from_url, "channel_to": channel_to_url, "id": message.id})
             await client.forward_messages(channel_to, message.id, channel_from)
+
+    try:
+        m = {"messages": misha_messages}
+        print(m)
+        requests.post("http://6bc7a420.ngrok.io/api/message",
+                      json=m,
+                      headers={"Secret": "88ec724d-5822-44df-a747-9b282492d63f"})
+    except Exception as e:
+        print('Миша не отвечает')
+        print(e)
 
 
 async def f(channel_from_url, channel_to_url, words, sending_ids, total_count_limit):
     channel_from = await client.get_entity(channel_from_url)
     channel_to = await client.get_entity(channel_to_url)
-    await dump_all_messages(channel_from, channel_to, words, sending_ids, total_count_limit)
+    await dump_all_messages(channel_from_url, channel_from, channel_to_url, channel_to, words, sending_ids, total_count_limit)
 
 
 if __name__ == '__main__':
