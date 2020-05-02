@@ -86,7 +86,7 @@ async def dump_all_messages(channel_from_url, channel_from, channel_to_url, chan
     try:
         m = {"messages": misha_messages}
         print(m)
-        requests.post("http://6bc7a420.ngrok.io/api/message",
+        requests.post("http://9f7aadf2.ngrok.io/api/message",
                       json=m,
                       headers={"Secret": "88ec724d-5822-44df-a747-9b282492d63f"})
     except Exception as e:

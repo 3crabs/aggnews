@@ -32,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_aggnews" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -92,6 +92,9 @@
       <workItem from="1588147750956" duration="555000" />
       <workItem from="1588164260627" duration="881000" />
       <workItem from="1588167130217" duration="5021000" />
+      <workItem from="1588173812965" duration="40000" />
+      <workItem from="1588173906358" duration="78000" />
+      <workItem from="1588329036018" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="add requirements.txt">
       <created>1588164354116</created>
@@ -100,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588164354116</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add send ids">
+      <created>1588173835414</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588173835414</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,37 +118,38 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add requirements.txt" />
+    <MESSAGE value="add send ids" />
+    <option name="LAST_COMMIT_MESSAGE" value="add send ids" />
   </component>
   <component name="WindowStateProjectService">
     <state x="412" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588166268885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="412" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588166268885" />
-    <state x="598" y="118" key="CommitChangelistDialog2" timestamp="1588164353532">
+    <state x="598" y="118" key="CommitChangelistDialog2" timestamp="1588173832394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588164353532" />
-    <state x="1220" y="281" key="FileChooserDialogImpl" timestamp="1588091706033">
+    <state x="598" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588173832394" />
+    <state x="1220" y="281" key="FileChooserDialogImpl" timestamp="1588331718110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588091706033" />
-    <state width="1869" height="228" key="GridCell.Tab.0.bottom" timestamp="1588172155893">
+    <state x="1220" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588331718110" />
+    <state width="914" height="863" key="GridCell.Tab.0.bottom" timestamp="1588331725580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="228" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588172155893" />
-    <state width="1869" height="228" key="GridCell.Tab.0.center" timestamp="1588172155893">
+    <state width="914" height="863" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588331725580" />
+    <state width="914" height="863" key="GridCell.Tab.0.center" timestamp="1588331725580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="228" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588172155893" />
-    <state width="1869" height="228" key="GridCell.Tab.0.left" timestamp="1588172155893">
+    <state width="914" height="863" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588331725580" />
+    <state width="914" height="863" key="GridCell.Tab.0.left" timestamp="1588331725580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="228" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588172155893" />
-    <state width="1869" height="228" key="GridCell.Tab.0.right" timestamp="1588172155893">
+    <state width="914" height="863" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588331725580" />
+    <state width="914" height="863" key="GridCell.Tab.0.right" timestamp="1588331725580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="228" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588172155893" />
+    <state width="914" height="863" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588331725580" />
     <state width="1869" height="228" key="GridCell.Tab.1.bottom" timestamp="1588172155894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -159,17 +170,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="124" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588166099798" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1588164356178">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1588173838028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588164356178" />
-    <state x="666" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1588173813079">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588173838028" />
+    <state x="666" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1588173907991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="306" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588173813079" />
+    <state x="666" y="306" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588173907991" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/aggnews$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1588171932345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/aggnews$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1588329059921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/aggnews$aggnews.coverage" NAME="aggnews Coverage Results" MODIFIED="1588091719950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
