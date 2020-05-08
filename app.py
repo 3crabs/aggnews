@@ -9,13 +9,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def hello_world():
-    return 'send POST on /api/v1/forwards<br>{<br>' \
-           '"channel_from_url": "https://t.me/brn_gamedev",<br>' \
-           '"channel_to_url": "https://t.me/joinchat/AAAAAFbg-_q73VXqppVYrg",<br>' \
-           '"words": "Арт, devtodev, 1110",<br>' \
-           '"ids": [1, 2, 3],<br>' \
-           '"count": 10<br>' \
-           '}<br>'
+    return 'Hello by 3CRABS'
 
 
 @app.route('/api/v1/forwards', methods=['POST'])
@@ -38,9 +32,9 @@ def forwards():
     return 'Forward!'
 
 
-api_id = 1021245
-api_hash = '927d8d2d536954a9adce865df76fab84'
-username = 'Ab2020'
+api_id = 1358396
+api_hash = '194e180caca6b9358e415bde11937e0d'
+username = 'vo13crabs'
 client = TelegramClient(username, api_id, api_hash)
 client.start()
 
