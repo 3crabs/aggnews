@@ -38,9 +38,9 @@ def forwards():
     return 'Forward!'
 
 
-api_id = 1358396
-api_hash = '194e180caca6b9358e415bde11937e0d'
-username = 'vo13crabs'
+api_id = 1021245
+api_hash = '927d8d2d536954a9adce865df76fab84'
+username = 'Ab2020'
 client = TelegramClient(username, api_id, api_hash)
 client.start()
 
