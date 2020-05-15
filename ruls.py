@@ -23,15 +23,15 @@ def forward(client, request):
 
 async def forward_order(client, order):
     logging.info(f'Запрос {order.channel_from_url}')
-    channel_from = get_channel_by_url(order.channel_from_url, client)
+    channel_from = await get_channel_by_url(order.channel_from_url, client)
     logging.info(f'Запрос {order.channel_to_url}')
-    channel_to = get_channel_by_url(order.channel_to_url, client)
+    channel_to = await get_channel_by_url(order.channel_to_url, client)
     await forward_all_messages(client, order, channel_from, channel_to)
 
 
 @lru_cache(maxsize=32)
-def get_channel_by_url(url, client):
-    channel = client.get_entity(url)
+async def get_channel_by_url(url, client):
+    channel = await client.get_entity(url)
     logging.info(f'{url} добавлена в кэш')
     return channel
 
