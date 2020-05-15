@@ -1,21 +1,15 @@
-def forward(client, request):
-    channel_from_url = request.json['channel_from_url']
-    channel_to_url = request.json['channel_to_url']
-    words = request.json['words']
-    ids = request.json['ids']
-    count = request.json['count']
+from Order import Order
 
-    ws = words.split(',')
-    ww = []
-    for w in ws:
-        ww.append(w.strip())
+
+def forward(client, request):
+    order = Order(request)
     with client:
         client.loop.run_until_complete(
-            f(channel_from_url, channel_to_url, ww, ids, count))
+            f(order.channel_from_url, order.channel_to_url, order.words, order.ids, order.count))
     return 'Forward!'
 
 
-def good_message(message, words, sending_ids):
+def is_good_message(message, words, sending_ids):
     for word in words:
         if (word in message.message) and (message.id not in sending_ids):
             return True
@@ -49,7 +43,7 @@ async def dump_all_messages(channel_from_url, channel_from, channel_to_url, chan
     misha_messages = []
 
     for message in messages:
-        if good_message(message, words, sending_ids):
+        if is_good_message(message, words, sending_ids):
             misha_messages.append({"channel_from": channel_from_url, "channel_to": channel_to_url, "id": message.id})
             await client.forward_messages(channel_to, message.id, channel_from)
 
