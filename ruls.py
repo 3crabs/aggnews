@@ -1,5 +1,6 @@
 import logging
 import time
+from functools import lru_cache
 
 import requests
 from telethon.tl.functions.messages import GetHistoryRequest
@@ -26,8 +27,8 @@ async def forward_order(client, order):
     await forward_all_messages(client, order, channel_from, channel_to)
 
 
+@lru_cache(maxsize=32)
 def get_channel_by_url(url, client):
-    # todo кэш
     return await client.get_entity(url)
 
 
