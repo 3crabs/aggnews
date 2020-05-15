@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca41bc3-dcb3-4e4f-b027-3af0b3380783" name="Default Changelist" comment="fix await">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ruls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ruls.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ca41bc3-dcb3-4e4f-b027-3af0b3380783" name="Default Changelist" comment="fix await" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +124,7 @@
       <workItem from="1589558800100" duration="1463000" />
       <workItem from="1589564352338" duration="495000" />
       <workItem from="1589573762703" duration="727000" />
-      <workItem from="1589574505133" duration="4080000" />
+      <workItem from="1589574505133" duration="4733000" />
     </task>
     <task id="LOCAL-00001" summary="add requirements.txt">
       <created>1588164354116</created>
@@ -234,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589577624085</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix await">
+      <created>1589578608351</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1589578608351</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,11 +338,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="124" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589549558723" />
-    <state x="787" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589577648580">
+    <state x="787" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589578610021">
       <screen x="72" y="27" width="2488" height="1053" />
     </state>
     <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589560349790" />
-    <state x="787" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.2488.1053@72.27.2488.1053" timestamp="1589577648580" />
+    <state x="787" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.2488.1053@72.27.2488.1053" timestamp="1589578610021" />
     <state x="666" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1589564355653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

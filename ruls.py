@@ -31,7 +31,7 @@ async def forward_order(client, order):
 
 @lru_cache(maxsize=32)
 async def get_channel_by_url(url, client):
-    channel = await client.get_entity(url)
+    channel = client.loop.run_until_complete.get_entity(url)
     logging.info(f'{url} добавлена в кэш')
     return channel
 
