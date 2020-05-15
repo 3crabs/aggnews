@@ -7,12 +7,7 @@ import requests
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
-def hello_world():
-    return 'Hello by 3CRABS'
-
-
-@app.route('/api/v1/forwards', methods=['POST'])
+@app.route('/', methods=['POST'])
 def forwards():
     print('forwards')
     print(request.json)
@@ -47,7 +42,8 @@ def good_message(message, words, sending_ids):
     return False
 
 
-async def dump_all_messages(channel_from_url, channel_from, channel_to_url, channel_to, words, sending_ids, total_count_limit):
+async def dump_all_messages(channel_from_url, channel_from, channel_to_url, channel_to, words, sending_ids,
+                            total_count_limit):
     offset_msg = 0  # номер записи, с которой начинается считывание
     limit_msg = 100  # максимальное число записей, передаваемых за один раз
     all_messages = []  # список всех сообщений
@@ -91,7 +87,8 @@ async def dump_all_messages(channel_from_url, channel_from, channel_to_url, chan
 async def f(channel_from_url, channel_to_url, words, sending_ids, total_count_limit):
     channel_from = await client.get_entity(channel_from_url)
     channel_to = await client.get_entity(channel_to_url)
-    await dump_all_messages(channel_from_url, channel_from, channel_to_url, channel_to, words, sending_ids, total_count_limit)
+    await dump_all_messages(channel_from_url, channel_from, channel_to_url, channel_to, words, sending_ids,
+                            total_count_limit)
 
 
 if __name__ == '__main__':
