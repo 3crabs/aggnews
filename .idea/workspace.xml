@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ca41bc3-dcb3-4e4f-b027-3af0b3380783" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Order.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ruls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ruls.py" afterDir="false" />
     </list>
@@ -78,7 +77,7 @@
       <workItem from="1588329036018" duration="636000" />
       <workItem from="1588910502578" duration="1363000" />
       <workItem from="1589549096039" duration="300000" />
-      <workItem from="1589549410628" duration="2592000" />
+      <workItem from="1589549410628" duration="4793000" />
     </task>
     <task id="LOCAL-00001" summary="add requirements.txt">
       <created>1588164354116</created>
@@ -122,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589550805110</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add class order">
+      <created>1589555407043</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589555407043</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,17 +154,18 @@
     <MESSAGE value="add app" />
     <MESSAGE value="new routes" />
     <MESSAGE value="add config and ruls" />
-    <option name="LAST_COMMIT_MESSAGE" value="add config and ruls" />
+    <MESSAGE value="add class order" />
+    <option name="LAST_COMMIT_MESSAGE" value="add class order" />
   </component>
   <component name="WindowStateProjectService">
     <state x="412" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589549635662">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="412" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589549635662" />
-    <state x="598" y="118" key="CommitChangelistDialog2" timestamp="1589550804610">
+    <state x="598" y="118" key="CommitChangelistDialog2" timestamp="1589555406522">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589550804610" />
+    <state x="598" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589555406522" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1589550696977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -203,10 +210,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="124" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589549558723" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1589550807637">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1589555408428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589550807637" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589555408428" />
     <state x="666" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1589549411835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
