@@ -22,14 +22,15 @@ def forward(client, request):
 
 
 async def forward_order(client, order):
-    channel_from = get_channel_by_url(order.channel_from_url, client)
-    channel_to = get_channel_by_url(order.channel_to_url, client)
+    channel_from = await get_channel_by_url(order.channel_from_url, client)
+    channel_to = await get_channel_by_url(order.channel_to_url, client)
     await forward_all_messages(client, order, channel_from, channel_to)
 
 
 @lru_cache(maxsize=32)
-def get_channel_by_url(url, client):
-    return await client.get_entity(url)
+async def get_channel_by_url(url, client):
+    channel = await client.get_entity(url)
+    return channel
 
 
 def is_good_message(message, words, sending_ids):
