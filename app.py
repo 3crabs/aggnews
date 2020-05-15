@@ -1,3 +1,4 @@
+import time
 from flask import Flask
 from flask import request
 from telethon.sync import TelegramClient
@@ -9,23 +10,29 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def hello_world():
-    return 'Hello by 3crabs'
+    return 'Hello by 3CRABS'
 
 
-@app.route('/api/v1/forwards', methods=['POST'])
+@app.route('/', methods=['POST'])
 def forwards():
+    print()
     print('forwards')
-    print(request.json)
     channel_from_url = request.json['channel_from_url']
+    print('channel_from_url:', channel_from_url)
     channel_to_url = request.json['channel_to_url']
+    print('channel_to_url', channel_to_url)
     words = request.json['words']
+    print('words:', words)
     ids = request.json['ids']
+    print('ids:', ids)
     count = request.json['count']
+    print('count', count)
     ws = words.split(',')
 
     ww = []
     for w in ws:
         ww.append(w.strip())
+    print(ww)
     with client:
         client.loop.run_until_complete(
             f(channel_from_url, channel_to_url, ww, ids, count))
@@ -42,7 +49,8 @@ client.start()
 def good_message(message, words, sending_ids):
     for word in words:
         if (word in message.message) and (message.id not in sending_ids):
-            print(message.message)
+            # print(message.message)
+            print('Forward!')
             return True
     return False
 
@@ -75,14 +83,19 @@ async def dump_all_messages(channel_from_url, channel_from, channel_to_url, chan
     for message in messages:
         if good_message(message, words, sending_ids):
             misha_messages.append({"channel_from": channel_from_url, "channel_to": channel_to_url, "id": message.id})
+            time.sleep(10)
             await client.forward_messages(channel_to, message.id, channel_from)
 
     try:
-        m = {"messages": misha_messages}
-        print(m)
-        requests.post("http://9f7aadf2.ngrok.io/api/message",
-                      json=m,
-                      headers={"Secret": "88ec724d-5822-44df-a747-9b282492d63f"})
+        if len(misha_messages) > 0:
+            m = {"messages": misha_messages}
+            print(m)
+            r = requests.post("http://localhost:3000/api/message",
+                          json=m,
+                          headers={"Secret": "88ec724d-5822-44df-a747-9b282492d63f"})
+            print('Отправили Мише!', r)
+        else:
+            print('Ничего не переслали')
     except Exception as e:
         print('Миша не отвечает')
         print(e)
