@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import time
 from functools import lru_cache
@@ -30,6 +31,7 @@ async def forward_order(client, order):
 
 
 @lru_cache(maxsize=32)
+@asyncio.coroutine
 async def get_channel_by_url(url, client):
     channel = await client.get_entity(url)
     logging.info(f'{url} добавлена в кэш')
