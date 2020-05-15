@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca41bc3-dcb3-4e4f-b027-3af0b3380783" name="Default Changelist" comment="add app">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aggnews.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aggnews.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0ca41bc3-dcb3-4e4f-b027-3af0b3380783" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ruls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vo13crabs.session" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
       <workItem from="1588329036018" duration="636000" />
       <workItem from="1588910502578" duration="1363000" />
       <workItem from="1589549096039" duration="300000" />
-      <workItem from="1589549410628" duration="226000" />
+      <workItem from="1589549410628" duration="1272000" />
     </task>
     <task id="LOCAL-00001" summary="add requirements.txt">
       <created>1588164354116</created>
@@ -110,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588911823219</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new routes">
+      <created>1589549745410</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589549745410</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,17 +140,22 @@
     <MESSAGE value="add send ids" />
     <MESSAGE value="add base" />
     <MESSAGE value="add app" />
-    <option name="LAST_COMMIT_MESSAGE" value="add app" />
+    <MESSAGE value="new routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="new routes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="412" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589549635662">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="412" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589549635662" />
-    <state x="598" y="118" key="CommitChangelistDialog2" timestamp="1588173832394">
+    <state x="598" y="118" key="CommitChangelistDialog2" timestamp="1589550699447">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588173832394" />
+    <state x="598" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589550699447" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1589550696977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589550696977" />
     <state x="1220" y="281" key="FileChooserDialogImpl" timestamp="1588910570698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -185,14 +196,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="124" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589549558723" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1588911827395">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1589549748219">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588911827395" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589549748219" />
     <state x="666" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1589549411835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="306" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589549411835" />
+    <state x="1069" y="276" width="586" height="488" key="find.popup" timestamp="1589550465868">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1069" y="276" width="586" height="488" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589550465868" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/aggnews$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1588911809630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
