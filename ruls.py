@@ -90,12 +90,15 @@ async def forward_all_messages(client, order, channel_from, channel_to):
 
     url = 'http://localhost:3000/api/message'
     try:
-        m = {"messages": forward_messages}
-        requests.post(
-            url,
-            json=m,
-            headers={"Secret": "88ec724d-5822-44df-a747-9b282492d63f"})
-        logging.info(f'Отправка {m} на {url} прошла успешно')
+        if forward_messages:
+            m = {"messages": forward_messages}
+            requests.post(
+                url,
+                json=m,
+                headers={"Secret": "88ec724d-5822-44df-a747-9b282492d63f"})
+            logging.info(f'Отправка {m} на {url} прошла успешно')
+        else:
+            logging.info(f'Отправлять нечего')
     except Exception as e:
         logging.error(f'{url} не отвечает e:{e}')
         exit(1)
