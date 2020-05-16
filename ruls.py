@@ -25,30 +25,23 @@ channels_cache = {}
 
 
 async def forward_order(client, order):
+    logging.info(f'Запрос {order.channel_from_url}')
     if order.channel_from_url in channels_cache:
         channel_from = channels_cache[order.channel_from_url]
     else:
         channel_from = await client.get_entity(order.channel_from_url)
         channels_cache[order.channel_from_url] = channel_from
+        logging.info(f'{order.channel_from_url} добавлена в кэш')
 
+    logging.info(f'Запрос {order.channel_to_url}')
     if order.channel_to_url in channels_cache:
         channel_to = channels_cache[order.channel_to_url]
     else:
         channel_to = await client.get_entity(order.channel_to_url)
         channels_cache[order.channel_to_url] = channel_to
+        logging.info(f'{order.channel_to_url} добавлена в кэш')
 
-    logging.info(f'Запрос {order.channel_from_url}')
-    channel_from = await get_channel_by_url(order.channel_from_url, client)
-    logging.info(f'Запрос {order.channel_to_url}')
-    channel_to = await get_channel_by_url(order.channel_to_url, client)
     await forward_all_messages(client, order, channel_from, channel_to)
-
-
-@lru_cache(maxsize=32)
-async def get_channel_by_url(url, client):
-    channel = await client.get_entity(url)
-    logging.info(f'{url} добавлена в кэш')
-    return channel
 
 
 def is_good_message(message, words, sending_ids):
