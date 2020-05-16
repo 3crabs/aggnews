@@ -1,6 +1,5 @@
 import logging
 import time
-from functools import lru_cache
 
 import requests
 from telethon.tl.functions.messages import GetHistoryRequest
@@ -9,8 +8,14 @@ from Order import Order
 
 logging.basicConfig(
     filename='logs.log',
+    level=logging.INFO,
     format='%(asctime)s %(levelname)s | %(message)s',
     datefmt='%d.%m.%Y %I:%M:%S %p')
+
+
+def start():
+    print("Hello, i'm aggnews from 3CRABS")
+    logging.info("Hello, i'm aggnews from 3CRABS")
 
 
 def forward(client, request):
