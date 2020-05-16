@@ -1,5 +1,4 @@
 import json
-
 from flask import Flask, request
 from telethon.sync import TelegramClient
 
